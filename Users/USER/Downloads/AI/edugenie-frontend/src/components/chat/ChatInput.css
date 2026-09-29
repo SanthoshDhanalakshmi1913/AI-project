@@ -1,0 +1,195 @@
+.chat-input-wrapper {
+    padding: 1rem 1.25rem 1.25rem;
+    background-color: var(--card-bg, #ffffff);
+    border-top: 1px solid var(--border-color, #e2e8f0);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.chat-input-suggestions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    overflow: hidden;
+}
+
+.suggestions-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--text-muted, #94a3b8);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+}
+
+.suggestions-scroll {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+}
+
+.suggestions-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.suggestion-pill-btn {
+    background-color: var(--bg-subtle, #f1f5f9);
+    border: 1px solid var(--border-color, #e2e8f0);
+    color: var(--text-secondary, #475569);
+    padding: 0.3rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s ease;
+}
+
+.suggestion-pill-btn:hover:not(:disabled) {
+    background-color: var(--primary-subtle, #e0e7ff);
+    color: var(--primary-color, #4f46e5);
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+.chat-input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.chat-input-field-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+    background-color: var(--bg-primary, #f8fafc);
+    border: 1.5px solid var(--border-color, #e2e8f0);
+    border-radius: 16px;
+    padding: 0.5rem 0.65rem 0.5rem 1rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme='dark'] .chat-input-field-container {
+    background-color: #111827;
+    border-color: #1e293b;
+}
+
+.chat-input-field-container:focus-within {
+    border-color: var(--primary-color, #4f46e5);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+    background-color: var(--card-bg, #ffffff);
+}
+
+[data-theme='dark'] .chat-input-field-container:focus-within {
+    background-color: #0b0f19;
+}
+
+.chat-input-textarea {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    font-family: inherit;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--text-primary, #0f172a);
+    max-height: 180px;
+    min-height: 24px;
+    padding: 0.35rem 0;
+}
+
+.chat-input-textarea::placeholder {
+    color: var(--text-muted, #94a3b8);
+}
+
+.chat-input-actions {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.1rem;
+}
+
+.chat-submit-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background-color: var(--bg-subtle, #e2e8f0);
+    color: var(--text-muted, #94a3b8);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: not-allowed;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
+}
+
+.chat-submit-btn.can-send {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(79, 70, 229, 0.35);
+}
+
+.chat-submit-btn.can-send:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.45);
+}
+
+.chat-submit-btn.can-send:active {
+    transform: translateY(0);
+}
+
+.input-spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.chat-input-footer-hints {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    font-size: 0.72rem;
+    color: var(--text-muted, #94a3b8);
+}
+
+.shortcut-hint kbd {
+    font-family: inherit;
+    background-color: var(--bg-subtle, #e2e8f0);
+    color: var(--text-secondary, #475569);
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color, #cbd5e1);
+    font-size: 0.68rem;
+    font-weight: 700;
+}
+
+[data-theme='dark'] .shortcut-hint kbd {
+    background-color: #1e293b;
+    border-color: #334155;
+    color: #cbd5e1;
+}
+
+@media (max-width: 640px) {
+    .powered-by-hint {
+        display: none;
+    }
+}

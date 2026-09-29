@@ -1,0 +1,5 @@
+com\edugenie\ExceptionAndSecurityTest.class
+com\edugenie\AiServicesIntegrationTest.class
+com\edugenie\QuizAndProgressIntegrationTest.class
+com\edugenie\AuthIntegrationTest.class
+com\edugenie\CourseAndLessonIntegrationTest.class

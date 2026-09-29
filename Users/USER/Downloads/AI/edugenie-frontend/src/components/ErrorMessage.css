@@ -1,0 +1,39 @@
+.error-message-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: var(--radius-md, 8px);
+    color: #991b1b;
+    margin: 1rem 0;
+}
+
+.error-icon-wrapper {
+    flex-shrink: 0;
+    color: var(--danger-color, #ef4444);
+    margin-top: 0.125rem;
+}
+
+.error-content {
+    flex: 1;
+}
+
+.error-title {
+    margin: 0;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: #991b1b;
+}
+
+.error-desc {
+    margin: 0.25rem 0 0;
+    font-size: 0.875rem;
+    color: #b91c1c;
+    line-height: 1.4;
+}
+
+.error-action {
+    flex-shrink: 0;
+}

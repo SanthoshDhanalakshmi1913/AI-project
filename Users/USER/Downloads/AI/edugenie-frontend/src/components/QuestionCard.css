@@ -1,0 +1,100 @@
+.question-card-container {
+    background-color: var(--card-bg, #ffffff);
+    border: 1px solid var(--border-color, #e2e8f0);
+    border-radius: var(--radius-xl, 16px);
+    padding: 2.25rem 2.5rem;
+    box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.04));
+    display: flex;
+    flex-direction: column;
+}
+
+.question-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.question-badge-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.question-number-pill {
+    font-size: 0.875rem;
+    font-weight: 800;
+    color: var(--primary-color, #4f46e5);
+    background-color: var(--primary-subtle, #e0e7ff);
+    padding: 0.3rem 0.65rem;
+    border-radius: var(--radius-md, 8px);
+}
+
+.question-type-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary, #64748b);
+    background-color: var(--bg-subtle, #f1f5f9);
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--radius-sm, 6px);
+}
+
+.flag-question-btn {
+    background: transparent;
+    border: 1px solid var(--border-color, #cbd5e1);
+    border-radius: var(--radius-full, 9999px);
+    padding: 0.35rem 0.85rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--text-secondary, #64748b);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.flag-question-btn:hover {
+    background-color: var(--bg-subtle, #f8fafc);
+    border-color: #f59e0b;
+    color: #b45309;
+}
+
+.flag-question-btn.is-flagged {
+    background-color: #fef3c7;
+    border-color: #fde68a;
+    color: #92400e;
+}
+
+.question-prompt-text {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-primary, #0f172a);
+    margin: 0 0 2rem;
+    line-height: 1.45;
+}
+
+.question-options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-bottom: 2rem;
+}
+
+.question-card-footer-tip {
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-light, #f1f5f9);
+}
+
+.tip-text {
+    font-size: 0.8125rem;
+    color: var(--text-muted, #94a3b8);
+}
+
+@media (max-width: 768px) {
+    .question-card-container {
+        padding: 1.5rem 1.25rem;
+    }
+    .question-prompt-text {
+        font-size: 1.15rem;
+    }
+}

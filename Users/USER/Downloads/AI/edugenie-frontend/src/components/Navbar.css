@@ -1,0 +1,272 @@
+.edu-navbar {
+    height: var(--navbar-height, 64px);
+    background-color: var(--navbar-bg, #ffffff);
+    border-bottom: 1px solid var(--border-color, #e2e8f0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    max-width: 500px;
+}
+
+.sidebar-toggle-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary, #64748b);
+    padding: 0.5rem;
+    border-radius: var(--radius-md, 8px);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.15s ease;
+}
+
+.sidebar-toggle-btn:hover {
+    background-color: var(--bg-hover, #f1f5f9);
+    color: var(--text-primary, #0f172a);
+}
+
+.navbar-search {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.85rem;
+    color: var(--text-muted, #94a3b8);
+    pointer-events: none;
+}
+
+.navbar-search-input {
+    width: 100%;
+    padding: 0.45rem 1rem 0.45rem 2.4rem;
+    font-size: 0.875rem;
+    background-color: var(--bg-subtle, #f8fafc);
+    border: 1px solid var(--border-color, #e2e8f0);
+    border-radius: var(--radius-full, 9999px);
+    color: var(--text-primary, #0f172a);
+    outline: none;
+    transition: all 0.15s ease;
+}
+
+.navbar-search-input:focus {
+    background-color: var(--card-bg, #ffffff);
+    border-color: var(--primary-color, #4f46e5);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ai-assistant-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.85rem;
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    color: #ffffff;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    border-radius: var(--radius-full, 9999px);
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ai-assistant-pill:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.45);
+}
+
+.ai-sparkle-icon {
+    animation: sparkleSpin 3s ease-in-out infinite;
+}
+
+@keyframes sparkleSpin {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(15deg) scale(1.15); }
+}
+
+.icon-btn {
+    background: transparent;
+    border: 1px solid var(--border-color, #e2e8f0);
+    color: var(--text-secondary, #64748b);
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-md, 8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.icon-btn:hover {
+    background-color: var(--bg-hover, #f1f5f9);
+    color: var(--text-primary, #0f172a);
+}
+
+.user-menu-container {
+    position: relative;
+}
+
+.user-profile-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    background: transparent;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-md, 8px);
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.user-profile-btn:hover {
+    background-color: var(--bg-hover, #f1f5f9);
+}
+
+.avatar-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+.user-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.user-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary, #0f172a);
+    line-height: 1.2;
+}
+
+.user-role-badge {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: var(--primary-color, #4f46e5);
+    background-color: var(--primary-subtle, #e0e7ff);
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-top: 0.15rem;
+}
+
+.user-dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.5rem);
+    width: 220px;
+    background-color: var(--card-bg, #ffffff);
+    border: 1px solid var(--border-color, #e2e8f0);
+    border-radius: var(--radius-lg, 12px);
+    box-shadow: var(--shadow-lg, 0 10px 25px rgba(0, 0, 0, 0.1));
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 200;
+    animation: fadeIn 0.15s ease-out;
+}
+
+.dropdown-user-header {
+    padding: 0.5rem 0.75rem;
+}
+
+.dropdown-user-name {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--text-primary, #0f172a);
+    margin: 0;
+}
+
+.dropdown-user-email {
+    font-size: 0.75rem;
+    color: var(--text-muted, #94a3b8);
+    margin: 0.2rem 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dropdown-divider {
+    height: 1px;
+    background-color: var(--border-color, #e2e8f0);
+    margin: 0.4rem 0;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-sm, 6px);
+    color: var(--text-secondary, #475569);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    transition: all 0.12s ease;
+}
+
+.dropdown-item:hover {
+    background-color: var(--bg-hover, #f1f5f9);
+    color: var(--text-primary, #0f172a);
+}
+
+.dropdown-item.logout-btn {
+    color: var(--danger-color, #ef4444);
+}
+
+.dropdown-item.logout-btn:hover {
+    background-color: #fef2f2;
+    color: #dc2626;
+}
+
+@media (max-width: 768px) {
+    .navbar-search {
+        display: none;
+    }
+    .user-meta {
+        display: none;
+    }
+    .ai-assistant-pill span {
+        display: none;
+    }
+    .ai-assistant-pill {
+        padding: 0.45rem;
+    }
+}

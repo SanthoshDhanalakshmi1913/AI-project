@@ -1,0 +1,6 @@
+com\edugenie\controller\AiLearningAssistantController$1.class
+com\edugenie\service\impl\GeminiAiServiceImpl$1.class
+com\edugenie\config\DataInitializer.class
+com\edugenie\controller\UserController.class
+com\edugenie\request\UserRequest$UserRequestBuilder.class
+com\edugenie\request\UserRequest.class
